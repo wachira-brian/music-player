@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Amazing Grace",
+        "artist": "John Newton",
+        "year": 1779,
+        "is_learned": false
+    },
+    {
+        "title": "Boom Boom Pow",
+        "artist": "The Black Eyed Peas",
+        "year": 2009,
+        "is_learned": false
+    },
+    {
+        "title": "Heartbreak Hotel",
+        "artist": "Elvis Presley",
+        "year": 1956,
+        "is_learned": true
+    },
+    {
+        "title": "Hello",
+        "artist": "Adella",
+        "year": 2012,
+        "is_learned": false
+    },
+    {
+        "title": "I Want to Hold Your Hand",
+        "artist": "The Beatles",
+        "year": 1964,
+        "is_learned": false
+    },
+    {
+        "title": "Macarena",
+        "artist": "Los Del Rio",
+        "year": 1996,
+        "is_learned": false
+    },
+    {
+        "title": "My Sharona",
+        "artist": "The Knack",
+        "year": 1979,
+        "is_learned": true
+    }
+]

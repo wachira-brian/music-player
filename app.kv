@@ -1,0 +1,112 @@
+# TODO: Create your Kivy layout in the kv language here
+
+BoxLayout:
+    orientation: 'horizontal'
+    padding: 5
+    spacing: 10
+
+    # Left side
+    AnchorLayout:
+        anchor_x: 'left'
+        anchor_y: 'top'
+        size_hint_x: 0.25
+        
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 5
+            size_hint_y: None
+            height: self.minimum_height
+
+            Label:
+                text: 'Sort by:'
+                size_hint_y: None
+                height: 60
+
+            Spinner:
+                id: sort_spinner
+                values: ['artist', 'title', 'year'] 
+                text: 'artist'
+                size_hint_y: None
+                height: 60
+                on_text: app.sort_songs(self.text)
+
+            Label:
+                text: 'Add New Song...'
+                size_hint_y: None
+                height: 50
+
+            Label:
+                text: 'Title:'
+                size_hint_y: None
+                height: 40
+
+            TextInput:
+                id: title_input
+                multiline: False
+                size_hint_y: None
+                height: 50
+
+            Label:
+                text: 'Artist:'
+                size_hint_y: None
+                height: 40
+
+            TextInput:
+                id: artist_input
+                multiline: False
+                size_hint_y: None
+                height: 50
+
+            Label:
+                text: 'Year:'
+                size_hint_y: None
+                height: 40
+
+            TextInput:
+                id: year_input
+                multiline: False
+                size_hint_y: None
+                height: 50
+
+            BoxLayout:
+                spacing: 10
+                size_hint_y: None
+                height: 50
+
+                Button:
+                    text: 'Add Song'
+                    on_press: app.add_song() 
+
+            BoxLayout:
+                spacing: 5
+                size_hint_y: None
+                height: 50
+
+                Button:
+                    text: 'Clear'
+                    on_press: app.clear_inputs()
+
+    # Right side
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+
+        Label:
+            id: status_label
+            text: 'To learn: 0  Learned: 0'
+            size_hint_y: None
+            height: 40
+
+        ScrollView:
+            BoxLayout:
+                id: songs_box
+                orientation: 'vertical'
+                spacing: 5
+                size_hint_y: None
+                height: self.minimum_height
+
+        Label:
+            id: message_label 
+            text: ''
+            size_hint_y: None
+            height: 40
